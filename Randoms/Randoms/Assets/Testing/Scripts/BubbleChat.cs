@@ -33,6 +33,7 @@ public class BubbleChat : MonoBehaviour {
         {
             SpeachBubble.SetActive(false);
             SpeachBubble_Text.SetActive(false);
+			inRange = false;
         }
 
         if(Vector3.Distance(transform.position, Player.transform.position) <= maxDist)
@@ -44,7 +45,7 @@ public class BubbleChat : MonoBehaviour {
 
         if(inRange && Input.GetKey(KeyCode.Space))
         {
-            SceneManager.LoadScene("");
+			SceneManager.LoadScene("Testing_Simulation");
         }
     }
 }
